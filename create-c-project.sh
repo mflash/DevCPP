@@ -45,7 +45,7 @@ EOF
 echo "# $PROJECT_NAME" > README.md
 echo -e "build/\n*.o\n*.exe\n*.out\n" > .gitignore
 
-echo "Projeto C++ '$PROJECT_NAME' criado com sucesso!"
+echo "Projeto C '$PROJECT_NAME' criado com sucesso!"
 echo "Para compilar:"
 echo "   cd build"
 echo "   cmake .."
