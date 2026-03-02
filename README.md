@@ -6,6 +6,6 @@
 
 ## Criação de Projetos C/++
 Os scripts **create-c-project.sh**/**create-cpp-project.sh** criam um projeto C ou C++ para ser usado em disciplinas de algoritmos e programação
-- Para criar um projeto usando o script use o comando: `./create-cpp-project.sh meu-projeto`
+- Exemplo: para criar um projeto C usando o script use o comando: `./create-c-project.sh meu-projeto`
 - O projeto é criado utilizando o [CMake](https://cmake.org/), uma ferramenta moderna e eficiente para gerenciamento de projetos com vários módulos e dependências (alternativa ao ``Makefile`` criado manualmente)
 - Para compilar e executar o projeto use as opções do VSCode, ou o terminal
