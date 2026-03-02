@@ -1,41 +1,29 @@
 {
-  "name": "Java",
+  "name": "C/C++ Dev Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:trixie",
   "build": {
     "dockerfile": "Dockerfile"
   },
   "features": {
-    "ghcr.io/devcontainers/features/java:1": {
-      "version": "25",             // <--- define JDK 25 explicitamente
-      "installMaven": true,
-      "installGradle": true
-    },
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {
-      "moby": false
-    }
+        "ghcr.io/devcontainers/features/common-utils:1": {
+          "configureZshAsDefaultShell": true
+        },
+        "ghcr.io/devcontainers/features/cpp:1": {
+            "installCmake": true,
+            "installGdb": true
+        }
   },
   "customizations": {
     "vscode": {
       "extensions": [
-        "oracle.oracle-java",
-        "redhat.vscode-xml",
-        "redhat.java",
         "vscjava.vscode-java-debug",
-        "ms-python.debugpy",
-        "ms-python.python",
         "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cmake-tools",
         "danielpinto8zz6.c-cpp-compile-run",
         "mathematic.vscode-pdf"
-      ],
-      "settings": {
-        "java.configuration.runtimes": [
-          {
-            "name": "JavaSE-25",
-            "path": "/usr/lib/jvm/msopenjdk-current",
-            "default": true
-          }
-        ]
-      }
+      ]
     }
   },
-  "postCreateCommand": "java -version"
+  "postCreateCommand": "gcc -version"
 }
